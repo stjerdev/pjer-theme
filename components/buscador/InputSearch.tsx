@@ -1,11 +1,10 @@
-import { Button, Tooltip } from "@material-ui/core"
-import InputBase from "@material-ui/core/InputBase"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import AddBoxIcon from "@material-ui/icons/AddBox"
-import RefreshIcon from "@material-ui/icons/Refresh"
-import SearchIcon from "@material-ui/icons/Search"
-import React, { useState } from "react"
-
+import { Button, Tooltip } from "@material-ui/core";
+import InputBase from "@material-ui/core/InputBase";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import AddBoxIcon from "@material-ui/icons/AddBox";
+import RefreshIcon from "@material-ui/icons/Refresh";
+import SearchIcon from "@material-ui/icons/Search";
+import React, { useState } from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -37,41 +36,31 @@ const useStyles = makeStyles((theme: Theme) =>
       width: 300,
       // top: "138px !important;",
     },
-  }),
-)
+  })
+);
 
 export type TFiltroAvanzadoForm = {
-  schema: any
-  uiSchema: any
-}
+  schema: any;
+  uiSchema: any;
+};
 
 type TInputSearch = {
-  onChange?: (item) => void
-  onDelete?: (item) => void
-  onAdd?: () => void
-  onRefresh?: () => void
-  onFiltro?: boolean
-}
+  onChange?: (item) => void;
+  onDelete?: (item) => void;
+  onAdd?: () => void;
+  onRefresh?: () => void;
+  onFiltro?: boolean;
+};
 function InputSearch(props: TInputSearch) {
-  const { onChange, onAdd, onRefresh, onFiltro } = props
-  const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null)
-  const [busquedaValue, setBusquedaValue] = useState("")
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
+  const { onChange, onAdd, onRefresh } = props;
+  const classes = useStyles();
+  const [busquedaValue, setBusquedaValue] = useState("");
 
   const handleChange = (event: any) => {
-    setBusquedaValue(event.target.value)
-    onChange(event)
-  }
+    setBusquedaValue(event.target.value);
+    onChange(event);
+  };
 
-  const open = Boolean(anchorEl)
   return (
     <>
       <div className={classes.root} id="div-buscar">
@@ -108,10 +97,9 @@ function InputSearch(props: TInputSearch) {
             </Button>
           </span>
         </Tooltip>
-      
       </div>
     </>
-  )
+  );
 }
 
-export default InputSearch
+export default InputSearch;

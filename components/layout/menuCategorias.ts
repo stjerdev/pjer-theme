@@ -1,16 +1,14 @@
-import AccountBoxIcon from '@material-ui/icons/AccountBox'
-import ChatIcon from "@material-ui/icons/Chat"
-import ComputerIcon from "@material-ui/icons/Computer"
-import DescriptionIcon from "@material-ui/icons/Description"
-import EmailIcon from "@material-ui/icons/Email"
-import GavelIcon from "@material-ui/icons/Gavel"
-import GroupAddIcon from '@material-ui/icons/GroupAdd'
-import HelpIcon from "@material-ui/icons/Help"
-import HomeIcon from "@material-ui/icons/Home"
-import InsertChartIcon from '@material-ui/icons/InsertChart'
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive"
-import PeopleIcon from '@material-ui/icons/People'
-import SettingsIcon from "@material-ui/icons/Settings"
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import ComputerIcon from "@material-ui/icons/Computer";
+import DescriptionIcon from "@material-ui/icons/Description";
+import GavelIcon from "@material-ui/icons/Gavel";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
+import HelpIcon from "@material-ui/icons/Help";
+import HomeIcon from "@material-ui/icons/Home";
+import InsertChartIcon from "@material-ui/icons/InsertChart";
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import PeopleIcon from "@material-ui/icons/People";
+import SettingsIcon from "@material-ui/icons/Settings";
 const menuCategorias = [
   { name: "Inicio", Icon: HomeIcon, perfiles: [], link: "/" },
   {
@@ -19,7 +17,6 @@ const menuCategorias = [
     Icon: GavelIcon,
     perfiles: [],
     items: [
-
       {
         name: "Expedientes",
         Icon: DescriptionIcon,
@@ -33,7 +30,6 @@ const menuCategorias = [
         link: "/notificaciones",
         perfiles: [],
       },
-
     ],
   },
   {
@@ -48,8 +44,8 @@ const menuCategorias = [
         link: "",
         a: true,
         perfiles: [],
-         items: [
-           {
+        items: [
+          {
             name: "Menu 2 - 1",
             link: "/menu21",
             Icon: GroupAddIcon,
@@ -70,7 +66,6 @@ const menuCategorias = [
           },
         ],
       },
-  
     ],
   },
   {
@@ -86,6 +81,6 @@ const menuCategorias = [
       },
     ],
   },
-]
+];
 
-export default menuCategorias
+export default menuCategorias;

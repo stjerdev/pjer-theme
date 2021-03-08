@@ -1,19 +1,19 @@
-import blue from "@material-ui/core/colors/blue"
-import Divider from "@material-ui/core/Divider"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
-import Link from "next/link"
-import React from "react"
-import { ICategoriaAviso } from "./avisosCategorias"
+import blue from "@material-ui/core/colors/blue";
+import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import Link from "next/link";
+import React from "react";
+import { ICategoriaAviso } from "./avisosCategorias";
 
 interface IProps {
-  avisosCategorizados?: ICategoriaAviso[]
+  avisosCategorizados?: ICategoriaAviso[];
 }
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((_: Theme) =>
   createStyles({
     root: {
       width: "100%",
@@ -29,12 +29,12 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "0px",
       margin: "0px",
     },
-  }),
-)
+  })
+);
 
 export default function AvisosContentPanel(props: IProps) {
-  const { avisosCategorizados } = props
-  const classes = useStyles()
+  const { avisosCategorizados } = props;
+  const classes = useStyles();
   return (
     <div className={classes.root}>
       {avisosCategorizados &&
@@ -59,5 +59,5 @@ export default function AvisosContentPanel(props: IProps) {
           </>
         ))}
     </div>
-  )
+  );
 }

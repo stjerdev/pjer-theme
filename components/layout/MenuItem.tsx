@@ -85,7 +85,6 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
     link,
     Icon,
     items = [],
-    perfiles,
     colapsado,
     itemSeleccionado,
     setItemSeleccionado,

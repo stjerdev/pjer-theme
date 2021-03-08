@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react"
-// Usage
-function Component() {
-  const isClient = useIsClient()
-  return <div>{isClient ? "Client" : "server"}</div>
-}
+import { useEffect, useState } from "react";
+
 // Hook
 function useIsClient() {
-  const [isClient, setClient] = useState(false)
+  const [isClient, setClient] = useState(false);
   useEffect(() => {
-    setClient(true)
-  }, [])
-  return isClient
+    setClient(true);
+  }, []);
+  return isClient;
 }
 
-export default useIsClient
+export default useIsClient;

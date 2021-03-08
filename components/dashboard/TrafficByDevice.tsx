@@ -1,68 +1,27 @@
-import React from "react"
-import clsx from "clsx"
 import {
   Box,
   Card,
   CardContent,
   CardHeader,
-  Divider,
-  Typography,
   colors,
+  Divider,
   makeStyles,
-  useTheme,
-} from "@material-ui/core"
-import LaptopMacIcon from "@material-ui/icons/LaptopMac"
-import PhoneIcon from "@material-ui/icons/Phone"
-import TabletIcon from "@material-ui/icons/Tablet"
+  Typography,
+} from "@material-ui/core";
+import LaptopMacIcon from "@material-ui/icons/LaptopMac";
+import PhoneIcon from "@material-ui/icons/Phone";
+import TabletIcon from "@material-ui/icons/Tablet";
+import clsx from "clsx";
+import React from "react";
 
 const useStyles = makeStyles(() => ({
   root: {
     height: "100%",
   },
-}))
+}));
 
 const TrafficByDevice = ({ ...rest }) => {
-  const classes = useStyles()
-  const theme = useTheme()
-
-  const data = {
-    datasets: [
-      {
-        data: [63, 15, 22],
-        backgroundColor: [
-          colors.indigo[500],
-          colors.red[600],
-          colors.orange[600],
-        ],
-        borderWidth: 8,
-        borderColor: colors.common.white,
-        hoverBorderColor: colors.common.white,
-      },
-    ],
-    labels: ["Desktop", "Tablet", "Mobile"],
-  }
-
-  const options = {
-    animation: false,
-    cutoutPercentage: 80,
-    layout: { padding: 0 },
-    legend: {
-      display: false,
-    },
-    maintainAspectRatio: false,
-    responsive: true,
-    tooltips: {
-      backgroundColor: theme.palette.background.default,
-      bodyFontColor: theme.palette.text.secondary,
-      borderColor: theme.palette.divider,
-      borderWidth: 1,
-      enabled: true,
-      footerFontColor: theme.palette.text.secondary,
-      intersect: false,
-      mode: "index",
-      titleFontColor: theme.palette.text.primary,
-    },
-  }
+  const classes = useStyles();
 
   const devices = [
     {
@@ -83,7 +42,7 @@ const TrafficByDevice = ({ ...rest }) => {
       icon: PhoneIcon,
       color: colors.orange[600],
     },
-  ]
+  ];
 
   return (
     <Card className={clsx(classes.root)} {...rest}>
@@ -91,7 +50,7 @@ const TrafficByDevice = ({ ...rest }) => {
       <Divider />
       <CardContent>
         <Box height={300} position="relative">
-        Doughnut
+          Doughnut
         </Box>
         <Box display="flex" justifyContent="center" mt={2}>
           {devices.map(({ color, icon: Icon, title, value }) => (
@@ -108,7 +67,7 @@ const TrafficByDevice = ({ ...rest }) => {
         </Box>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default TrafficByDevice
+export default TrafficByDevice;
