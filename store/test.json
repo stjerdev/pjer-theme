@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5fd0d431a7b11b0008ce05ce"),
+    "schema" : "{\"type\":\"object\",\"properties\":{\"responsable\":{\"type\":\"object\",\"customRender\":\"SelectorResponsable\",\"properties\":{\"title\":{\"type\":\"string\"},\"keyId\":{\"type\":\"string\"}}},\"fecha_desde\":{\"type\":\"string\",\"title\":\"mov fecha desde\",\"enum\":[\"Última semana\",\"Último mes\",\"Último año\"]},\"tipo_proceso\":{\"type\":\"object\",\"customRender\":\"SelectorTipoProcesos\",\"properties\":{\"keyId\":{\"type\":\"string\"},\"title\":{\"type\":\"string\"}}},\"dependencia\":{\"type\":\"object\",\"customRender\":\"SelectorDependencia\",\"properties\":{\"title\":{\"type\":\"string\"},\"keyId\":{\"type\":\"string\"}}}}}",
+    "uiSchema" : "{\"type\":\"VerticalLayout\",\"elements\":[{\"type\":\"Control\",\"scope\":\"#/properties/responsable\"},{\"type\":\"Control\",\"scope\":\"#/properties/fecha_desde\"},{\"type\":\"Control\",\"scope\":\"#/properties/tipo_proceso\"},{\"type\":\"Control\",\"scope\":\"#/properties/dependencia\"}]}",
+    "nombre" : "Filtros",
+    "descripcion" : "Filtros para buscar expedientes",
+    "version" : "1.0"
+}
